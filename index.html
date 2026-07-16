@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Teen Web Development Bootcamp | Learn HTML, CSS & JavaScript</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.7;
+    color:#333;
+    background:#f7f9fc;
+}
+
+header{
+    background:linear-gradient(135deg,#2E86DE,#6C63FF);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+header p{
+    max-width:850px;
+    margin:auto;
+    font-size:1.2rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 35px;
+    background:white;
+    color:#2E86DE;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#f1f1f1;
+}
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#2E86DE;
+    font-size:2rem;
+}
+
+.subtitle{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    margin-bottom:50px;
+    color:#555;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.card h3{
+    color:#2E86DE;
+    margin-bottom:15px;
+}
+
+.card ul{
+    margin-left:20px;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.project{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.skill{
+    background:#2E86DE;
+    color:white;
+    padding:12px 18px;
+    border-radius:25px;
+}
+
+.cta{
+    background:#2E86DE;
+    color:white;
+    text-align:center;
+    border-radius:15px;
+    padding:60px 20px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#222;
+    color:white;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<h1>Teen Web Development Bootcamp</h1>
+
+<p>
+An engaging 8-week coding program where middle and high school students
+learn to build professional websites using HTML, CSS, and JavaScript.
+Students gain hands-on programming experience while creating real projects
+they can proudly showcase.
+</p>
+
+<!-- <a href="#" class="btn">Enroll Now</a> -->
+
+</header>
+
+<section>
+
+<h2>Why Parents Love This Course</h2>
+
+<p class="subtitle">
+Technology is becoming an essential skill in every career. This course helps
+students develop creativity, logical thinking, problem-solving, and confidence
+through real coding projects—not just watching videos.
+</p>
+
+<div class="projects">
+
+<div class="project">
+<h3>🌐 Build Websites</h3>
+<p>Create modern responsive websites from scratch.</p>
+</div>
+
+<div class="project">
+<h3>💻 Learn Programming</h3>
+<p>Write JavaScript code that makes websites interactive.</p>
+</div>
+
+<div class="project">
+<h3>🚀 Publish Online</h3>
+<p>Deploy projects publicly using GitHub Pages.</p>
+</div>
+
+<div class="project">
+<h3>🎓 Portfolio Ready</h3>
+<p>Finish with projects students can show schools and future employers.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>8-Week Curriculum</h2>
+
+<p class="subtitle">
+Each week includes two instructor-led sessions packed with demonstrations,
+coding exercises, and hands-on practice.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Week 1 — HTML Foundations</h3>
+
+<strong>Session 1</strong>
+
+<ul>
+<li>Internet Basics</li>
+<li>How Websites Work</li>
+<li>HTML Structure</li>
+<li>Anatomy of HTML Tags</li>
+</ul>
+
+<br>
+
+<strong>Session 2</strong>
+
+<ul>
+<li>Lists</li>
+<li>Hyperlinks</li>
+<li>Images</li>
+<li>Semantic HTML Layout</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Week 2 — CSS Basics</h3>
+
+<strong>Session 1</strong>
+
+<ul>
+<li>Introduction to CSS</li>
+<li>Selectors</li>
+<li>Colors</li>
+<li>Styling Text</li>
+</ul>
+
+<br>
+
+<strong>Session 2</strong>
+
+<ul>
+<li>The CSS Box Model</li>
+<li>Padding</li>
+<li>Borders</li>
+<li>Margins</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Week 3 — Layout & Design</h3>
+
+<strong>Session 1</strong>
+
+<ul>
+<li>Flexbox Layout</li>
+<li>Navigation Bar</li>
+<li>Modern Page Design</li>
+</ul>
+
+<br>
+
+<strong>Session 2</strong>
+
+<ul>
+<li>Responsive Design</li>
+<li>Media Queries</li>
+<li>Mobile-First Development</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Week 4 — JavaScript Fundamentals</h3>
+
+<strong>Session 1</strong>
+
+<ul>
+<li>Variables</li>
+<li>Data Types</li>
+<li>Console</li>
+<li>Calculator Project</li>
+</ul>
+
+<br>
+
+<strong>Session 2</strong>
+
+<ul>
+<li>Conditionals</li>
+<li>If / Else Logic</li>
+<li>Mini Programming Games</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Week 5 — Dynamic Websites</h3>
+
+<strong>Session 1</strong>
+
+<ul>
+<li>The DOM</li>
+<li>Selecting Elements</li>
+<li>Changing HTML with JavaScript</li>
+</ul>
+
+<br>
+
+<strong>Session 2</strong>
+
+<ul>
+<li>Event Listeners</li>
+<li>Click Events</li>
+<li>Keyboard Events</li>
+<li>Changing CSS with JavaScript</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Week 6 — Interactive Projects</h3>
+
+<strong>Session 1</strong>
+
+<ul>
+<li>Build a To-Do List App</li>
+<li>Organizing JavaScript Code</li>
+</ul>
+
+<br>
+
+<strong>Session 2</strong>
+
+<ul>
+<li>Arrays</li>
+<li>Saving Data</li>
+<li>Browser Local Storage</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Week 7 — Capstone Project</h3>
+
+<strong>Session 1</strong>
+
+<ul>
+<li>Project Planning</li>
+<li>Wireframing</li>
+<li>Git & GitHub Basics</li>
+</ul>
+
+<br>
+
+<strong>Session 2</strong>
+
+<ul>
+<li>Capstone Development</li>
+<li>Debugging Lab</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Week 8 — Deployment & Showcase</h3>
+
+<strong>Session 1</strong>
+
+<ul>
+<li>Project Optimization</li>
+<li>Deploy with GitHub Pages</li>
+<li>Netlify</li>
+</ul>
+
+<br>
+
+<strong>Session 2</strong>
+
+<ul>
+<li>Final Presentation</li>
+<li>Demo Day</li>
+<li>Celebrate Student Success!</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Skills Students Will Gain</h2>
+
+<div class="skills">
+
+<div class="skill">HTML5</div>
+<div class="skill">CSS3</div>
+<div class="skill">Responsive Design</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Problem Solving</div>
+<div class="skill">Git</div>
+<div class="skill">GitHub</div>
+<div class="skill">Debugging</div>
+<div class="skill">Web Design</div>
+<div class="skill">Programming Logic</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="cta">
+
+<h2 style="color:white;">By the End of the Course...</h2>
+
+<p style="max-width:800px;margin:20px auto;font-size:1.1rem;">
+Every student will build and publish a professional website, understand the
+fundamentals of programming, and leave with a portfolio project they can
+share with friends, family, teachers, and future employers.
+</p>
+
+<!-- <a href="#" class="btn">Register Today</a> -->
+
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Teen Web Development Bootcamp | Learn HTML, CSS & JavaScript</title>
+
+<style>
+:root {
+    --bg-main: #0a0e17;
+    --bg-card: #121824;
+    --accent-blue: #00f2fe;
+    --accent-purple: #9b51e0;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --border-color: #1e293b;
+    --terminal-green: #4ade80;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    line-height:1.7;
+    color: var(--text-main);
+    background: var(--bg-main);
+}
+
+header{
+    background: radial-gradient(circle at top, rgba(155, 81, 224, 0.15), transparent 60%), 
+                radial-gradient(circle at bottom, rgba(0, 242, 254, 0.1), transparent 60%),
+                #0b0f19;
+    border-bottom: 1px solid var(--border-color);
+    text-align:center;
+    padding:100px 20px;
+    position: relative;
+}
+
+header::before {
+    content: "const classActive = true;";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: monospace;
+    color: var(--terminal-green);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+header h1{
+    font-size:3.5rem;
+    margin-bottom:20px;
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p{
+    max-width:850px;
+    margin:auto;
+    font-size:1.2rem;
+    color: var(--text-muted);
+}
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    color: var(--accent-blue);
+    font-size:2.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: -0.5px;
+}
+
+h2::before {
+    content: "## ";
+    color: var(--accent-purple);
+}
+
+.subtitle{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    margin-bottom:50px;
+    color: var(--text-muted);
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.card{
+    background: var(--bg-card);
+    padding:30px;
+    border-radius:12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-blue);
+}
+
+.card h3{
+    color: var(--accent-blue);
+    margin-bottom:15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card ul{
+    margin-left:20px;
+    color: var(--text-muted);
+}
+
+.card ul li {
+    margin-bottom: 6px;
+}
+
+.card strong {
+    color: var(--accent-purple);
+    font-family: monospace;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.project{
+    background: var(--bg-card);
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    border: 1px solid var(--border-color);
+}
+
+.project h3 {
+    color: var(--text-main);
+    margin-bottom: 10px;
+}
+
+.project p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.skill{
+    background: rgba(0, 242, 254, 0.1);
+    color: var(--accent-blue);
+    border: 1px solid rgba(0, 242, 254, 0.3);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+/* Instructor Section */
+.instructor-profile {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.instructor-avatar {
+    font-size: 5rem;
+    background: #1e293b;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--accent-purple);
+}
+
+.instructor-info h3 {
+    color: var(--accent-blue);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Schedule Layout */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 15px 20px;
+    text-align: left;
+}
+
+.schedule-table th {
+    background-color: rgba(155, 81, 224, 0.1);
+    color: var(--accent-purple);
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
+.schedule-table tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.schedule-table tr:last-child {
+    border-bottom: none;
+}
+
+/* FAQ Layout */
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.faq-item {
+    background: var(--bg-card);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.faq-item h3 {
+    color: var(--accent-blue);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.faq-item p {
+    color: var(--text-muted);
+}
+
+/* Parent Resources */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.resource-card {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.resource-card h3 {
+    color: var(--accent-purple);
+    margin-bottom: 15px;
+}
+
+.resource-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.cta{
+    background: linear-gradient(135deg, rgba(11, 15, 25, 0.9), rgba(18, 24, 36, 0.9));
+    border: 1px solid var(--accent-blue);
+    color:white;
+    text-align:center;
+    border-radius:15px;
+    padding:60px 20px;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:#05070a;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-family: monospace;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    .instructor-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<h1>Teen Web Development Bootcamp</h1>
+
+<p>
+An engaging 8-week coding program where middle and high school students
+learn to build professional websites using HTML, CSS, and JavaScript.
+Students gain hands-on programming experience while creating real projects
+they can proudly showcase.
+</p>
+
+</header>
+
+<section>
+
+<h2>Why Parents Love This Course</h2>
+
+<p class="subtitle">
+Technology is becoming an essential skill in every career. This course helps
+students develop creativity, logical thinking, problem-solving, and confidence
+through real coding projects—not just watching videos.
+</p>
+
+<div class="projects">
+
+<div class="project">
+<h3>🌐 Build Websites</h3>
+<p>Create modern responsive websites from scratch.</p>
+</div>
+
+<div class="project">
+<h3>💻 Learn Programming</h3>
+<p>Write JavaScript code that makes websites interactive.</p>
+</div>
+
+<div class="project">
+<h3>🚀 Publish Online</h3>
+<p>Deploy projects publicly using GitHub Pages.</p>
+</div>
+
+<div class="project">
+<h3>🎓 Portfolio Ready</h3>
+<p>Finish with projects students can show schools and future employers.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- NEW: Schedule Section -->
+<section id="schedule">
+
+<h2>Class Schedule</h2>
+
+<p class="subtitle">
+Interactive coding sessions designed to fit right into your teen's busy weekly schedule.
+</p>
+
+<table class="schedule-table">
+    <thead>
+        <tr>
+            <th>Days</th>
+            <th>Time (EST)</th>
+            <th>Format</th>
+            <th>Office Hours</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Tuesdays & Thursdays</strong></td>
+            <td>4:30 PM - 6:00 PM</td>
+            <td>Live Interactive Zoom Lab</td>
+            <td>Wednesday 4:00 PM - 5:00 PM</td>
+        </tr>
+        <tr>
+            <td><strong>Saturdays (Optional Support)</strong></td>
+            <td>10:00 AM - 11:30 AM</td>
+            <td>1-on-1 Debugging & Sandbox</td>
+            <td>By appointment</td>
+        </tr>
+    </tbody>
+</table>
+
+</section>
+
+
+<!-- NEW: About the Instructor Section -->
+<section id="instructor">
+
+<h2>About the Instructor</h2>
+
+<p class="subtitle">
+Learn directly from a passionate educator and professional software engineer.
+</p>
+
+<div class="instructor-profile">
+    <div class="instructor-avatar">
+        👨‍💻
+    </div>
+    <div class="instructor-info">
+        <h3>Getinet A., Lead Instructor</h3>
+        <p style="color: var(--text-muted); margin-bottom: 15px;">Senior Data Scientist & Youth Mentor</p>
+        <p>
+            Learn from an experienced technology professional with a passion for inspiring the next generation of innovators. Extensive experience across leading technology companies like Amazon, government, and higher education, your instructor has built software, AI, machine learning, and data-driven solutions for real-world challenges.
+
+            A former university lecturer with a decade of teaching experience, he believes students learn best by building. Through hands-on projects and personalized guidance, students gain practical coding skills, confidence, and the problem-solving mindset needed to succeed in today's technology-driven world.
+
+            Highlights
+
+            💻 Senior Data Scientist
+            🤖 AI & Machine Learning Professional
+            🏢 Industry experience in leading technology companies and government
+            🎓 Former University Lecturer
+            🚀 Project-Based, Hands-On Teaching Approach
+    </div>
+</div>
+
+</section>
+
+<!-- NEW: Parent Resources Section -->
+<section id="parents">
+
+<h2>Parent Resources</h2>
+
+<p class="subtitle">
+We believe family support is key to a student's success. Use these resources to help guide your teen.
+</p>
+
+<div class="resources-grid">
+    <div class="resource-card">
+        <h3>💻 Technology Checklist</h3>
+        <p>A breakdown of what your teen needs before day one. Hint: A laptop/desktop (Windows, Mac, or Chromebook) and a stable internet connection is all it takes!</p>
+    </div>
+    <div class="resource-card">
+        <h3>🧭 Setup Guide: VS Code</h3>
+        <p>We'll use Visual Studio Code—the premier industry tool. Follow our simple step-by-step installation walkthrough with your teen to get a head start.</p>
+    </div>
+    <div class="resource-card">
+        <h3>🌟 Support & Inspiration</h3>
+        <p>Tips on how to encourage your child when they hit debugging walls. Learn why treating "bugs" as normal logic puzzles builds essential resilience.</p>
+    </div>
+</div>
+
+</section>
+
+<!-- NEW: FAQ Section -->
+<section id="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<p class="subtitle">
+Got questions? We've got answers to some of our most common inquiries.
+</p>
+
+<div class="faq-grid">
+    <div class="faq-item">
+        <h3>Does my teen need prior programming experience?</h3>
+        <p>Not at all! This course is built from the ground up specifically for absolute beginners. We start with basic concepts and scale up step-by-step.</p>
+    </div>
+    <div class="faq-item">
+        <h3>What age group is this course designed for?</h3>
+        <p>Our curriculum is optimized for middle and high school students, roughly ages 12 to 17, who want to understand the technology they use every day.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Are there homework assignments?</h3>
+        <p>Yes, but they are practical, project-based exercises designed to reinforce what was learned in class. Usually, they take about 1-2 hours per week.</p>
+    </div>
+    <div class="faq-item">
+        <h3>What if my student misses a live session?</h3>
+        <!--<p>Every single session is recorded and uploaded to our secure classroom hub within 2 hours of ending. Students can easily watch back and catch up.</p>-->
+    </div>
+</div>
+
+</section>
+
+<section>
+
+<h2>Skills Students Will Gain</h2>
+
+<div class="skills">
+
+<div class="skill">HTML5</div>
+<div class="skill">CSS3</div>
+<div class="skill">Responsive Design</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Problem Solving</div>
+<div class="skill">Git</div>
+<div class="skill">GitHub</div>
+<div class="skill">Debugging</div>
+<div class="skill">Web Design</div>
+<div class="skill">Programming Logic</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="cta">
+
+<h2 style="color:var(--accent-blue);">By the End of the Course...</h2>
+
+<p style="max-width:800px;margin:20px auto;font-size:1.1rem; color: var(--text-muted);">
+Every student will build and publish a professional website, understand the
+fundamentals of programming, and leave with a portfolio project they can
+share with friends, family, teachers, and future employers.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+console.log("Teen Web Development Bootcamp • HTML • CSS • JavaScript • GitHub Pages");
+</p>
+
+</footer>
+
+</body>
+</html>
+</section>
+
+<footer>
+
+<p>
+Teen Web Development Bootcamp • HTML • CSS • JavaScript • GitHub Pages
+</p>
+
+</footer>
+
+</body>
+</html>
