@@ -443,6 +443,141 @@ h2::before {
     padding:60px 20px;
 }
 
+/* --- Next Cohort Section Styles --- */
+.cohort-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* Outer border glow effect matching the theme */
+.cohort-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+}
+
+.cohort-details h3 {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--accent-blue);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cohort-badge {
+    background: rgba(155, 81, 224, 0.15);
+    color: var(--accent-purple);
+    border: 1px solid rgba(155, 81, 224, 0.3);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-family: monospace;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.cohort-info-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.cohort-info-list li {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cohort-info-list strong {
+    color: var(--text-main);
+}
+
+/* Visual Seat Tracker (Right Column) */
+.seat-tracker {
+    background: rgba(10, 14, 23, 0.6);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.seat-status {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.seat-count {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--accent-blue);
+    text-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.seat-capacity {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-family: monospace;
+}
+
+/* Glowing Progress Bar */
+.progress-bar-container {
+    background: #1e293b;
+    border-radius: 10px;
+    height: 12px;
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%; /* Starts at 0% and is animated dynamically by JS */
+    background: linear-gradient(90deg, var(--accent-purple), var(--accent-blue));
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+    border-radius: 10px;
+    transition: width 1.2s cubic-bezier(0.1, 1, 0.1, 1); /* Ultra smooth ease-out */
+}
+
+.urgency-text {
+    font-size: 0.85rem;
+    color: #f43f5e; /* Coral red warning color */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .cohort-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+}
 footer{
     text-align:center;
     padding:40px;
@@ -489,8 +624,9 @@ footer{
     <ul class="nav-links">
         <li><a href="#schedule">Schedule</a></li>
         <li><a href="#curriculum">Curriculum</a></li>
-        <li><a href="#instructor">Instructor</a></li>
+        <li><a href="#technologies">Technologies</a></li>
         <li><a href="#parents">Parents</a></li>
+        <li><a href="#instructor">Instructor</a></li>
         <li><a href="#faq">FAQ</a></li>
     </ul>
 </nav>
@@ -567,6 +703,72 @@ through real coding projects—not just watching videos.
 
 </section>
 
+
+<!-- Next Cohort Section -->
+<section id="next-cohort">
+    <h2>Join the Next Cohort</h2>
+    <p class="subtitle">
+        We keep our class sizes strictly limited to ensure every single student receives personalized instruction and dedicated support.
+    </p>
+
+    <div class="cohort-container">
+        <!-- Details Column -->
+        <div class="cohort-details">
+            <span class="cohort-badge">&lt; Now Enrolling /&gt;</span>
+            <h3>Summer 2026 Cohort</h3>
+            <p style="color: var(--text-muted);">
+                Equip your teen with creative coding skills before school workloads pick up. Students will complete the program with a fully functional online portfolio.
+            </p>
+            
+            <ul class="cohort-info-list">
+                <li>📅 <strong>Start Date:</strong> July 20, 2026</li>
+                <li>⏳ <strong>Duration:</strong> 8 Weeks (Graduation: September 20, 2026)</li>
+                <li>🎯 <strong>Target Age Group:</strong> 12 - 17 Years Old (Middle & High School)</li>
+            </ul>
+        </div>
+
+        <!-- Visual Seat Tracker Column -->
+        <div class="seat-tracker">
+            <div class="seat-status">Class Availability</div>
+            
+            <!-- Update the number inside here to dynamically change the progress bar -->
+            <span class="seat-count" id="seats-left">0</span>
+            
+            <!-- Update the max class size here if needed -->
+            <div class="seat-capacity">SEATS REMAINING (Max Class Size: <span id="max-seats">8</span>)</div>
+            
+            <!-- Visual progress indicator -->
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+            
+            <div class="urgency-text">
+                ⚠️ Spots are filled on a first-come, first-served basis.
+            </div>
+            <div> Next Cohort starts a week after the current one ends.</div>
+        </div>
+    </div>
+
+    <!-- Small logic block to auto-simulate the progress bar based on above numbers -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const seatsLeft = parseInt(document.getElementById('seats-left').textContent) || 0;
+            const maxSeats = parseInt(document.getElementById('max-seats').textContent) || 15;
+            
+            // Avoid dividing by zero just in case
+            if (maxSeats > 0) {
+                const filledSeats = maxSeats - seatsLeft;
+                const percentageFilled = (filledSeats / maxSeats) * 100;
+                
+                // Set the width with a tiny delay to allow page transition animations to register beautifully
+                setTimeout(() => {
+                    document.getElementById('progress-fill').style.width = percentageFilled + "%";
+                }, 150);
+            }
+        });
+    </script>
+</section>
+
 <!-- Schedule Section -->
 <section id="schedule">
 
@@ -610,7 +812,7 @@ Interactive coding sessions designed to fit right into your teen's busy weekly s
 
 <p class="subtitle">
 Each week includes two instructor-led sessions packed with demonstrations,
-coding exercises, and hands-on practice.[cite: 2]
+coding exercises, and hands-on practice.
 </p>
 
 <div class="grid">
@@ -798,6 +1000,75 @@ coding exercises, and hands-on practice.[cite: 2]
 
 </section>
 
+<!-- NEW: Technologies Section (Moved Setup Here for Clarity) -->
+<section id="technologies">
+
+<h2>Technologies We Teach</h2>
+
+<p class="subtitle">
+We teach the exact same real-world coding tools and environments used by professional developers around the globe.
+</p>
+
+<div class="grid">
+    <div class="card">
+        <h3>💻 Visual Studio Code</h3>
+        <p><strong>Code Editor</strong></p>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 10px;">
+            The industry standard environment for writing code. It's safe, 100% free, and runs smoothly on Windows, Mac, and Chromebooks.
+        </p>
+    </div>
+    <div class="card">
+        <h3>🌐 HTML5 & CSS3</h3>
+        <p><strong>Web Essentials</strong></p>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 10px;">
+            HTML provides the core layout of websites, while CSS controls the visual aesthetic, colors, fonts, and responsiveness.
+        </p>
+    </div>
+    <div class="card">
+        <h3>⚡ JavaScript</h3>
+        <p><strong>Programming Logic</strong></p>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 10px;">
+            The engine behind the modern web. JavaScript makes pages interactive, allowing teens to run complex calculations and mini games.
+        </p>
+    </div>
+    <div class="card">
+        <h3>🐙 Git & GitHub Pages</h3>
+        <p><strong>Cloud Hosting</strong></p>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 10px;">
+            Teens learn how real programmers save their draft updates and deploy their finished web code live to the public internet.
+        </p>
+    </div>
+</div>
+
+</section>
+
+
+
+<!-- Parent Resources Section (Simplified & Non-Tech Focused) -->
+<section id="parents">
+
+<h2>Parent Resources</h2>
+
+<p class="subtitle">
+We believe family support is key to a student's success. Use these simplified resources to help guide your teen.
+</p>
+
+<div class="resources-grid">
+    <div class="resource-card">
+        <h3>💻 Technology Checklist</h3>
+        <p>A simple breakdown of what your teen needs before day one. Hint: Any standard laptop or desktop computer (Windows, Mac, or Chromebook) and a stable internet connection is all it takes!</p>
+    </div>
+    <div class="resource-card">
+        <h3>🌟 Support & Inspiration</h3>
+        <p>Tips on how to encourage your child when they hit debugging walls. Learn why treating "bugs" as normal logic puzzles builds essential life resilience.</p>
+    </div>
+    <div class="resource-card">
+        <h3>🛡️ Safe & Positive Environment</h3>
+        <p>All live sessions are moderated to ensure a secure, respectful, and constructive group space where students can confidently collaborate and showcase their work.</p>
+    </div>
+</div>
+
+</section>
 
 <!-- About the Instructor Section -->
 <section id="instructor">
@@ -814,49 +1085,23 @@ Learn directly from a passionate educator and professional software engineer.
     </div>
     <div class="instructor-info">
         <h3>Getinet A., Lead Instructor</h3>
-        <p style="color: var(--text-muted); margin-bottom: 15px;">Senior Data Scientist & Youth Mentor[cite: 2]</p>
+        <p style="color: var(--text-muted); margin-bottom: 15px;">Senior Data Scientist & Youth Mentor</p>
         <p>
-            Learn from an experienced technology professional with a passion for inspiring the next generation of innovators. Extensive experience across leading technology companies like Amazon, government, and higher education, your instructor has built software, AI, machine learning, and data-driven solutions for real-world challenges.[cite: 2]
+            Learn from an experienced technology professional with a passion for inspiring the next generation of innovators. Extensive experience across leading technology companies like Amazon, government, and higher education, your instructor has built software, AI, machine learning, and data-driven solutions for real-world challenges.
         </p>
         <br>
         <p>
-            A former university lecturer with a decade of teaching experience, he believes students learn best by building[cite: 2]. Through hands-on projects and personalized guidance, students gain practical coding skills, confidence, and the problem-solving mindset needed to succeed in today's technology-driven world[cite: 2].
+            A former university lecturer with a decade of teaching experience, he believes students learn best by building. Through hands-on projects and personalized guidance, students gain practical coding skills, confidence, and the problem-solving mindset needed to succeed in today's technology-driven world.
         </p>
         <br>
         <strong>Highlights</strong>
         <ul style="list-style-type: none; margin-left: 0; margin-top: 10px; color: var(--text-muted);">
-            <li>💻 Senior Data Scientist[cite: 2]</li>
-            <li>🤖 AI & Machine Learning Professional[cite: 2]</li>
-            <li>🏢 Industry experience in leading technology companies and government[cite: 2]</li>
-            <li>🎓 Former University Lecturer[cite: 2]</li>
-            <li>🚀 Project-Based, Hands-On Teaching Approach[cite: 2]</li>
+            <li>💻 Senior Data Scientist</li>
+            <li>🤖 AI & Machine Learning Professional</li>
+            <li>🏢 Industry experience in leading technology companies and government</li>
+            <li>🎓 Former University Lecturer</li>
+            <li>🚀 Project-Based, Hands-On Teaching Approach</li>
         </ul>
-    </div>
-</div>
-
-</section>
-
-<!-- Parent Resources Section -->
-<section id="parents">
-
-<h2>Parent Resources</h2>
-
-<p class="subtitle">
-We believe family support is key to a student's success. Use these resources to help guide your teen.
-</p>
-
-<div class="resources-grid">
-    <div class="resource-card">
-        <h3>💻 Technology Checklist</h3>
-        <p>A breakdown of what your teen needs before day one. Hint: A laptop/desktop (Windows, Mac, or Chromebook) and a stable internet connection is all it takes!</p>
-    </div>
-    <div class="resource-card">
-        <h3>🧭 Setup Guide: VS Code</h3>
-        <p>We'll use Visual Studio Code—the premier industry tool. Follow our simple step-by-step installation walkthrough with your teen to get a head start.</p>
-    </div>
-    <div class="resource-card">
-        <h3>🌟 Support & Inspiration</h3>
-        <p>Tips on how to encourage your child when they hit debugging walls. Learn why treating "bugs" as normal logic puzzles builds essential resilience.</p>
     </div>
 </div>
 
@@ -886,7 +1131,7 @@ Got questions? We've got answers to some of our most common inquiries.
     </div>
     <div class="faq-item">
         <h3>What if my student misses a live session?</h3>
-        <p>Every session is recorded and made available for students. This ensures that even if they miss a class due to extracurriculars, they can easily catch up on their own time.[cite: 2]</p>
+        <p>We do not record our live sessions to protect student privacy and promote a safe, comfortable, and active environment for kids to interact. If a student misses a class, we will provide comprehensive catch-up materials, key code highlights, and practice exercises so they can stay on track.[cite: 2]</p>
     </div>
 </div>
 
