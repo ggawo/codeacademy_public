@@ -613,6 +613,88 @@ footer{
         text-align: center;
     }
 }
+
+/* --- Mobile Menu Toggle Button (Desktop: Hidden) --- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: var(--text-main);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* --- Minimal Mobile Dropdown View (Under 768px) --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Show hamburger button */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: calc(var(--nav-height) - 10px); /* Align slightly tucked under the nav */
+        right: 40px; /* Matches the navbar side padding */
+        width: 220px; /* Minimal card width */
+        height: auto; /* Shrinks tightly to fit the links */
+        background: rgba(18, 24, 36, 0.98); /* Solid dark card color */
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        
+        /* Stack links vertically with small padding */
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+        z-index: 1000;
+
+        /* Smooth fade & drop-down animation */
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    /* Elegant, smooth drop-in state when active */
+    .nav-links.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(15px); 
+    }
+
+    .nav-links a {
+        font-size: 0.95rem; /* Clean, standard text size */
+        width: 100%;
+        text-align: center;
+        padding: 6px 0;
+    }
+
+    /* Transform Hamburger into an "X" when active */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+        background-color: var(--accent-blue);
+    }
+    
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: var(--accent-blue);
+    }
+}
 </style>
 
 </head>
@@ -621,7 +703,7 @@ footer{
 <!-- Navigation Bar -->
 <nav class="navbar">
     <a href="#" class="nav-logo">&lt;TeenCode<span>/&gt;</span></a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
         <li><a href="#schedule">Schedule</a></li>
         <li><a href="#curriculum">Curriculum</a></li>
         <li><a href="#technologies">Technologies</a></li>
@@ -629,7 +711,14 @@ footer{
         <li><a href="#instructor">Instructor</a></li>
         <li><a href="#faq">FAQ</a></li>
     </ul>
+    <!-- HAMBURGER MENU BUTTON -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
 </nav>
+
 
 <!-- Header with integrated Graphics Mockup -->
 <header>
@@ -1195,6 +1284,28 @@ console.log("Teen Web Development Bootcamp • HTML • CSS • JavaScript • G
 </p>
 
 </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        // Toggle active classes on click
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu automatically when a link is clicked
+        const links = document.querySelectorAll('.nav-links a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    });
+</script>
 
 </body>
 </html>
