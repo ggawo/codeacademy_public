@@ -745,7 +745,19 @@ through real coding projects—not just watching videos.
             <div class="urgency-text">
                 ⚠️ Spots are filled on a first-come, first-served basis.
             </div>
-            <div> Next Cohort starts a week after the current one ends.</div>
+            <div id="next-cohort-info" style="color: var(--accent-blue);"> Next Cohort starts a week after the current one ends.</div>
+            <script>
+                const seatsLeft = parseInt(document.getElementById('seats-left').textContent) || 0;
+                const targetDiv = document.getElementById("next-cohort-info");
+
+                if (seatsLeft==0) {
+                    targetDiv.style.display = "block"; // Shows the div
+                } else {
+                    targetDiv.style.display = "none";  // Keeps it hidden
+                }
+
+            </script>
+            
         </div>
     </div>
 
