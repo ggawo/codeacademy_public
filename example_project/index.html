@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Deployment-realistic meta tags: real title, description, favicon, social preview -->
+  <title>Ethan's Corner — Soccer, Chess &amp; Code</title>
+  <meta name="description" content="Ethan's personal corner of the internet: soccer, chess, and the code projects in between. A capstone project built from scratch." />
+  <meta property="og:title" content="Ethan's Corner" />
+  <meta property="og:description" content="Guitar, chess, and the code projects in between." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Google Fonts: Fredoka (playful display) + Inter (clean body) + JetBrains Mono (utility/badges) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!--
+    THIS IS A REFERENCE EXAMPLE, NOT SOMETHING TO COPY.
+    It's a "My Profile" capstone built to hit every item on
+    requirements_checklist.md AND to show what a full, polished,
+    deployment-ready finished project looks like — multiple real
+    sections, several working JS features, a real contact form,
+    and a design system that feels intentional. Your topic,
+    palette, fonts, and content should be your own — the point
+    is the LEVEL of craft, not this specific look.
+  -->
+
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <header>
+    <nav>
+      <a href="#hero" class="logo">Ethan's&nbsp;Corner</a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" data-nav>About</a></li>
+        <li><a href="#skills" data-nav>Skills</a></li>
+        <li><a href="#interests" data-nav>Interests</a></li>
+        <li><a href="#gallery" data-nav>Gallery</a></li>
+        <li><a href="#favorites" data-nav>Favorites</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-text reveal">
+      <p class="eyebrow">9th grade &middot; self-taught coder</p>
+      <h1>Hi, I'm Ethan.<br />This is my corner of the internet.</h1>
+      <p class="hero-sub">
+         A
+        website I built line by line this summer. Welcome in.
+      </p>
+      <div class="hero-actions">
+        <a href="#interests" class="btn-primary">See what I'm into ↓</a>
+        <a href="#contact" class="btn-ghost">Get in touch</a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap reveal">
+      <div class="tape tape-top"></div>
+      <img src="images/ethan-photo.jpg" alt="Illustrated avatar of Ethan, initial E on a purple-to-pink gradient" class="hero-photo" />
+      <div class="tape tape-bottom"></div>
+      <span class="hero-badge">🎸 + ♞ + &lt;/&gt;</span>
+    </div>
+  </section>
+
+  <main>
+    <section id="about" class="section">
+      <p class="section-eyebrow reveal">01 — About</p>
+      <div class="about-grid">
+        <div class="reveal">
+          <h2>A little about me</h2>
+          <p>
+            I'm a 9th grader who loves building small web projects, playing
+            soccer, and playing in soccer tournaments across Pennsylvania. I
+            started learning to code this summer, and this site is my
+            capstone project — the first thing I've built completely from
+            scratch, HTML up.
+          </p>
+          <p>
+            You can see the code behind this page on
+            <a href="https://github.com" target="_blank" rel="noopener" class="text-link">my GitHub profile ↗</a>.
+          </p>
+          <ul class="skill-badges">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git &amp; GitHub</li>
+          </ul>
+        </div>
+
+        <div class="stat-grid reveal">
+          <div class="stat-card">
+            <span class="stat-number">4<span class="stat-unit">yrs</span></span>
+            <span class="stat-label">Playing soccer</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">100<span class="stat-unit">+</span></span>
+            <span class="stat-label">Games played</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">1</span>
+            <span class="stat-label">Website built from scratch</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">Bugs squashed (and counting)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-tint">
+      <p class="section-eyebrow reveal">02 — Skills</p>
+      <h2 class="reveal">What I'm learning</h2>
+      <p class="reveal">A rough, honest self-rating, just where I'm at right now.</p>
+      <div class="skills-list reveal">
+        <div class="skill-row">
+          <div class="skill-row-label">
+            <span>HTML</span><span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-track"><div class="skill-fill" style="--fill: 85%;"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row-label">
+            <span>CSS</span><span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-track"><div class="skill-fill" style="--fill: 75%;"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row-label">
+            <span>JavaScript</span><span class="skill-pct">60%</span>
+          </div>
+          <div class="skill-track"><div class="skill-fill" style="--fill: 60%;"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-row-label">
+            <span>Soccer</span><span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-track"><div class="skill-fill" style="--fill: 75%;"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests" class="section">
+      <p class="section-eyebrow reveal">03 — Interests</p>
+      <h2 class="reveal">What I spend my time on</h2>
+      <div class="card-grid reveal">
+        <article class="card card-tilt-left">
+          <img src="images/soccer.jpg" alt="Illustrated purple-to-pink card labeled Soccer with a soccer ball" />
+          <h3>Soccer</h3>
+          <p>Four years of playing, currently in tournaments across Pennsylvania. Still learning more about dribbling techniquesand how to score a goal to win.</p>
+          <ul class="tag-row"><li>Practice</li><li>Tournaments</li></ul>
+        </article>
+        <article class="card card-tilt-right">
+          <img src="images/chess.jpg" alt="Illustrated teal-to-purple card labeled Chess with a knight piece" />
+          <h3>Chess</h3>
+          <p>I play online most nights. My little sister has somehow become the person I fear most on the board.</p>
+          <ul class="tag-row"><li>Openings</li><li>Endgames</li></ul>
+        </article>
+        <article class="card card-tilt-left">
+          <img src="images/coding.jpg" alt="Illustrated pink-to-teal card labeled Code with a code bracket icon" />
+          <h3>Coding</h3>
+          <p>Building this site taught me more than any tutorial video ever did — especially the debugging part.</p>
+          <ul class="tag-row"><li>HTML/CSS</li><li>JavaScript</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="section section-tint">
+      <p class="section-eyebrow reveal">04 — Gallery</p>
+      <h2 class="reveal">A few snapshots</h2>
+      <p class="reveal">Click any photo for a closer look.</p>
+      <div class="gallery-grid reveal">
+        <button class="gallery-item" data-caption="Practice Session — working through a new fingerstyle piece.">
+          <img src="images/gallery-1.jpg" alt="Illustrated gradient tile labeled Practice Session" />
+        </button>
+        <button class="gallery-item" data-caption="Tournament Night — down to the wire in the final round.">
+          <img src="images/gallery-2.jpg" alt="Illustrated gradient tile labeled Tournament Night" />
+        </button>
+        <button class="gallery-item" data-caption="First Commit — the exact moment this site went into Git.">
+          <img src="images/gallery-3.jpg" alt="Illustrated gradient tile labeled First Commit" />
+        </button>
+        <button class="gallery-item" data-caption="Chess Club — Tuesday afternoons, best part of the week.">
+          <img src="images/gallery-4.jpg" alt="Illustrated gradient tile labeled Chess Club" />
+        </button>
+        <button class="gallery-item" data-caption="Open Mic — first time playing guitar in front of people.">
+          <img src="images/gallery-5.jpg" alt="Illustrated gradient tile labeled Open Mic" />
+        </button>
+        <button class="gallery-item" data-caption="Late-Night Debug — the bug was a missing semicolon. It's always a missing semicolon.">
+          <img src="images/gallery-6.jpg" alt="Illustrated gradient tile labeled Late-Night Debug" />
+        </button>
+      </div>
+    </section>
+
+    <section id="favorites" class="section">
+      <p class="section-eyebrow reveal">05 — Favorites</p>
+      <h2 class="reveal">My top 5 games, ranked</h2>
+      <ol class="favorites-list reveal">
+        <li><span class="rank">01</span> Chess <span class="note">(yes, I'm counting it)</span></li>
+        <li><span class="rank">02</span> Portal 2</li>
+        <li><span class="rank">03</span> Minecraft</li>
+        <li><span class="rank">04</span> Stardew Valley</li>
+        <li><span class="rank">05</span> Rocket League</li>
+      </ol>
+    </section>
+
+    <section id="fun-fact" class="section section-tint">
+      <p class="section-eyebrow reveal">06 — Interactive</p>
+      <h2 class="reveal">Get a random fact about me</h2>
+      <div class="fact-card reveal">
+        <p id="fact-output">Click the button — I promise none of these are boring.</p>
+        <button id="fact-btn" class="btn-primary">Give me a fact →</button>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <p class="section-eyebrow reveal">07 — Contact</p>
+      <h2 class="reveal">Say hi</h2>
+      <p class="reveal">
+        Want to talk chess strategy, soccer, or debugging horror
+        stories? Send a note below, or find me on
+        <a href="https://github.com" target="_blank" rel="noopener" class="text-link">GitHub ↗</a>.
+      </p>
+
+      <form id="contact-form" class="contact-form reveal" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Say whatever's on your mind" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Send message</button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <ul class="social-row reveal">
+        <li>
+          <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.57.1.78-.25.78-.55v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.82 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.08.78 2.17v3.21c0 .3.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://example.com" target="_blank" rel="noopener" aria-label="Music profile">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://example.com" target="_blank" rel="noopener" aria-label="Chess profile">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 2 4 6v5c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V6l-8-4z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a href="#hero" class="logo">Ethan's&nbsp;Corner</a>
+        <p>Soccer, chess, and the code projects in between.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#interests">Interests</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <p class="footer-bottom">&copy; 2026 Ethan &middot; Built for my coding capstone project &middot; <a href="#hero" class="text-link">Back to top ↑</a></p>
+  </footer>
+
+  <!-- Lightbox modal for the gallery, populated by script.js -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close image">✕</button>
+    <figure>
+      <img id="lightbox-img" src="" alt="" />
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+  </div>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
