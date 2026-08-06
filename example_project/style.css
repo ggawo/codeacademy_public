@@ -187,6 +187,35 @@ nav {
   border-radius: 2px;
 }
 
+/* ---------- Cohort Showcase ---------- */
+.cohort-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 32px;
+  background: linear-gradient(135deg, rgba(124, 108, 240, 0.10), rgba(78, 205, 196, 0.12));
+  border: 1px solid rgba(124, 108, 240, 0.16);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.cohort-showcase h2 {
+  margin-bottom: 8px;
+}
+
+.cohort-showcase p {
+  margin-bottom: 0;
+  max-width: 56ch;
+}
+
+@media (max-width: 768px) {
+  .cohort-showcase {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
