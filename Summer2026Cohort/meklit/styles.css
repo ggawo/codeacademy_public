@@ -1,0 +1,73 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --bg: #f4f7fb;
+  --panel: #fff;
+  --text: #132238;
+  --muted: #5b6b80;
+  --accent: #4f46e5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #eef4ff 0%, #f8fafc 100%);
+  color: var(--text);
+}
+
+.student-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.student-hero {
+  margin: 1.5rem 0 2rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.student-hero h1 {
+  font-size: 2rem;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.student-hero p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.content-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid #dfe7f2;
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
