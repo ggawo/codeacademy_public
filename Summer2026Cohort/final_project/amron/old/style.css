@@ -1,0 +1,94 @@
+body { 
+    margin: 10px 10px 10px 10px;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 
+    'Helvetica Neue', Arial; margin: 0; line-height: 1.45; color: #222; 
+    background: #b2e5cd;
+    color: #424eb8;
+    background-color: #7abd74;
+    padding: 80px;
+}
+
+
+main{
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 5rem;
+}
+.main-nav{
+    background: #09631c;
+    position: sticky;
+    top: 0;
+    height: 4rem;
+    width: 100%;
+}
+
+.main-nav ul{
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    margin: 0; padding: 0.25rem 1rem; 
+    justify-content: center; 
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 120ms ease, transform 120ms ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+ background: rgba(218, 209, 209, 0.15);
+ outline: none;
+ transform: translateY(-2px);
+}
+@media (max-width: 520px) {
+  .main-nav ul { flex-direction: column; gap: 0; align-items: stretch; }
+  .main-nav a { text-align: center; padding: 0.9rem; border-radius: 0; }
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #e6ab23;
+    color: rgb(6, 32, 204);
+    background-image: url('nile.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#show-ethio-map-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #09631c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 120ms ease, transform 120ms ease;
+}
+#hide-ethio-map-btn{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #cf9b0d;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 120ms ease, transform 120ms ease;
+}
+
+table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            th, td {
+                padding: 8px;
+            }

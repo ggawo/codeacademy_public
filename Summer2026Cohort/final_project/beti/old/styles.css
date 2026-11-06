@@ -1,0 +1,88 @@
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #222;
+    background-color: #E0F7F5;
+}
+
+nav {
+    background: #d41b72;
+    
+}
+.main-nav {
+    background: #d41b72;
+    position: sticky;
+    
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0.25rem 1rem;
+    justify-content: center;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 120ms ease, transform 120ms ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    background: #510240;
+    transform: translateY(-2px);
+}
+
+h1 {
+    text-align: center;
+    color: #212f7c;
+    padding: 20px;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+h2 {
+    color: #0e43c9;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 4rem;
+    background-color: #cebb90;
+    color: rgb(219, 224, 217);
+    background-image: url('music_volleyball2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 2rem;
+    background-color: #d41b72;
+    color: rgb(64, 173, 21);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

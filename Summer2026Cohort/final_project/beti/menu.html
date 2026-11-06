@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Music, Volleyball, and F1 Racing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="main-nav primary-nav" aria-label="Main">
+        <input class="menu-checkbox" type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu">
+        <label class="menu-toggle" for="menu-toggle">☰ Menu</label>
+        <ul id="primary-menu" class="nav-links">
+            <li><a href="menu.html">Home</a></li>
+            <li><a href="wikipedia.html">Wikipedia</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="f1.html">F1 Racing</a></li>
+            <li><a href="volleyball.html">Volleyball</a></li>
+        </ul>
+    </nav>
+    <header>
+    <div class="header-content">
+        <h3> WELCOME! <h3>
+        </div>
+
+</header>
+
+    <header>
+        <div class="header-context">
+            <h1>Music in Volleyball and F1 Racing</h1>
+        </div>
+   
+    
+ </header>
+    <main>
+        <section id="home">
+            <h2>Why Music Matters in Sports</h2>
+            <p> 
+                This website shows how music connects two completely different worlds: Volleyball and Formula 1 Racing! 
+                Music is super important because it helps athletes lock in and get hyped before a massive game or a high-speed race. 
+                The right beat can give you an extra burst of energy, reduce stress, and make playing sports way more fun and memorable.
+            </p>
+        </section>
+
+        <section id="wikipedia">
+            <h2>Learn More on Wikipedia</h2>
+            <p> 
+                Want to do some deeper research? Click these links to check out the official Wikipedia pages for 
+                <a href="https://en.wikipedia.org/wiki/Music" class="wiki-link" target="_blank">Music</a>, 
+                <a href="https://en.wikipedia.org/wiki/Formula_One" class="wiki-link" target="_blank">F1 Racing</a>, and 
+                <a href="https://en.wikipedia.org/wiki/Volleyball" class="wiki-link" target="_blank">Volleyball</a>.
+            </p>
+        </section>
+
+        <section id="images">
+            <h2>Cool Sports Images</h2>
+          
+          <div> 
+              <article class="card">
+                    <img src="images (4).jpg" alt="Music" class="player-image">
+                    <div class="player-card-content">
+                        <span class="card-category">Music</span>
+                        <h3>The Magic of Music</h3>
+                        <p>Music is an art form that combines vocal or instrumental sounds using rhythm, melody, and harmony to express human emotion and creativity.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images (5).jpg" alt="Music" class="player-image">
+                    <div class="player-card-content">
+                        <span class="card-category">Volleyball</span>
+                        <h3>Beyond the Court</h3>
+                        <p> Volleyball is a team sport where two teams of six players use their hands or arms to hit a ball back and forth over a high net, trying to land it on the opponent's side while preventing it from touching their own.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="images (6).jpg" alt="F1" class="player-image">
+                    <div class="player-card-content">
+                        <span class="card-category">F1 Racing</span>
+                        <h3>Behind the Wheel</h3>
+                        <p>Formula 1 (F1) is the highest class of international single-seater, open-wheel auto racing, sanctioned by the Fédération Internationale de l'Automobile (FIA) and contested across a global series of races known as Grands Prix.</p>
+                    </div>
+                </article>
+          </div>
+        </section>
+    </main>
+     <button id="show-ethio-map-btn">Show Ethiopia Map</button>
+     
+ <script>
+        const showEthioMapBtn = document.getElementById('show-ethio-map-btn');
+        const ethioMapDiv = document.getElementById('ethio-map');
+
+        showEthioMapBtn.addEventListener('click', function() {
+            const isHidden = ethioMapDiv.hidden;
+            ethioMapDiv.hidden = !isHidden;
+            showEthioMapBtn.textContent = isHidden ? 'Hide Ethiopia Map' : 'Show Ethiopia Map';
+            showEthioMapBtn.setAttribute('aria-expanded', String(isHidden));
+        });
+
+
+
+    
+
+    </script>
+
+<footer class="site-footer">
+ 
+<ul> 
+    <li><a href="menu.html">Home</a></li> 
+    <li><a href="wikipedia.html">Wikipedia</a></li> 
+    <li><a href="music.html">Music</a></li> 
+    <li><a href="f1.html">F1 Racing</a></li> 
+    <li><a href="volleyball.html">Volleyball</a></li> 
+</ul> 
+<div>© 2026 Bethel, Meklit and Obi. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

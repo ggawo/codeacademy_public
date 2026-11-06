@@ -1,0 +1,113 @@
+/* Basic page styles */
+* { box-sizing: border-box; }
+body { 
+  background-color: rgb(32, 128, 86);
+  padding: 0; margin: 0; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; line-height: 1.45; color: #222;
+  margin: 10px 10px 10px 10px;
+  padding: 80px;
+  font-family: system-ui, -aple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin: 0; line-height: 1.45; color: #222; }
+header, main, footer { padding: 1rem; max-width: 900px; margin: 0 auto; }
+header { text-align: center; }
+
+/* Navigation menu style }*/
+.main-nav { 
+  background: #d1d085; 
+  position: sticky; 
+  top: 0; 
+  height: 4rem; width: 100%; 
+}
+.main-nav ul { list-style: none; margin: 0; padding: 0.25rem 1rem; display: flex; gap: 0.5rem; justify-content: center; }
+.main-nav li {color:antiquewhite }
+.main-nav a {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  color: black;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 120ms ease, transform 120ms ease;
+}
+.main-nav a:hover,
+.main-nav a:focus {
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+  outline: none;
+}
+.main-nav a:active { transform: translateY(0); }
+
+/* Active/selected link example */
+.main-nav a.active { background: rgba(255,255,255,0.25); }
+
+/* Mobile: stack the menu */
+@media (max-width: 520px) {
+  .main-nav ul { flex-direction: column; gap: 0; align-items: stretch; }
+  .main-nav a { text-align: center; padding: 0.9rem; border-radius: 0; }
+}
+/* Small utility */
+section { margin: 1rem 0; padding: 0.5rem; background: #f9f9fb; border-radius: 6px; }
+footer { text-align: center; color: #666; font-size: 0.9rem; padding-bottom: 2rem; }
+
+
+  button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: rgb(75, 69, 16);
+            transition: 0.2s;
+            background-color: rgb(91, 233, 98);
+        }
+
+button:hover { opacity: 0.9; transform: scale(1.02); }
+
+/* Champions League standings */
+#league-table {
+  margin: 1rem 0;
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(18, 45, 77, 0.2);
+}
+
+#league-table table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+#league-table th,
+#league-table td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #dce5ef;
+}
+
+#league-table th {
+  background: #12345a;
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}
+
+#league-table th:first-child,
+#league-table td:first-child {
+  text-align: left;
+}
+
+#league-table td:first-child {
+  color: #12345a;
+  font-weight: 700;
+}
+
+#league-table tbody tr:nth-child(even) {
+  background: #f0f5fa;
+}
+
+#league-table tbody tr:hover {
+  background: #e0f2df;
+}
+
+#league-table tbody tr:last-child td {
+  border-bottom: 0;
+}

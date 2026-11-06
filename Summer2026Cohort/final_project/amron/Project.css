@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+}
+
+#description {
+    background-color: #27ae60; /* Field Green */
+    border: 4px solid #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 800px;
+    color: #ecdada;
+    font-size: 18px;
+}
+
+
+
+
+body {
+    background-color: #168b0c;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 20px;
+    }
+
+    .menu-bar {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .menu-bar a {
+        font-size: 14px;
+    }
+}
+
+/* THE FLEX CONTAINER (PARENT) */
+.field-container {
+    background-color: #27ae60; /* Field Green */
+    border: 4px solid #ffffff;
+    border-radius: 12px;
+    height: 250px;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+
+    /* ACTIVATE THE FLEX FIELD SYSTEM */
+    display: flex;
+    
+    /* Horizontal alignment tuning options: center, space-between, space-around */
+    justify-content: space-around; 
+    
+    /* Vertical alignment tuning options: center, flex-start, flex-end */
+    align-items: center; 
+}
+
+a:link{
+    color:pink;
+}
+a:visited{
+    color:purple;
+}
+
+a:hover{
+    color:green;
+}
+
+a:active{
+    color:orange;
+}
+
+
+
+
+/* THE FLEX ITEMS (CHILDREN) */
+.player-card {
+    background-color: #ffffff;
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    text-align: center;
+    width: 160px;
+}
+
+.menu-bar{
+    background-image: url('Flaggs.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 4px solid #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    color: #ffffff;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.menu-bar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.18);
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.menu-bar a:hover {
+    text-decoration: underline;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #27ae60; /* Field Green */
+    gap: 20px;
+
+}
+html,body {
+    margin: 10px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.top-bar{
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: left;
+}
+
+a:active{
+    color:#de471d;
+}
+
+
+
+
+
+
+
+
+.Information {
+    background-color: #9dd4b4; /* Field Green */
+    border: 4px solid #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 950px;
+    color: #188850;
+    font-size: 18px;
+}
+.card-1 { border-bottom: 5px solid #e74c3c; }
+.card-2 { border-bottom: 5px solid #f1c40f; }
+.card-3 { border-bottom: 5px solid #3498db; }

@@ -39,10 +39,23 @@ body {
   border-radius: 999px;
   background: var(--card);
   box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+  transition: background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  background: var(--accent-soft);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.14);
 }
 
 .back-link:hover {
-  background: var(--accent-soft);
+  transform: translateY(-2px);
+}
+
+.back-link:focus-visible,
+.card:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
 }
 
 .hero {
@@ -79,7 +92,8 @@ body {
 }
 
 .card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: var(--card);
   border: 1px solid #dfe7f2;
   border-radius: 1rem;
@@ -87,22 +101,31 @@ body {
   text-decoration: none;
   color: inherit;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
-.card:hover {
+.card:hover,
+.card:focus-visible {
+  border-color: var(--accent);
   transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
+  box-shadow: 0 16px 36px rgba(79, 70, 229, 0.15);
 }
 
 .card h2 {
   margin-top: 0;
   margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.card h3 {
+  margin: 0 0 0.5rem;
 }
 
 .card p {
+  flex: 1;
   color: var(--muted);
   line-height: 1.6;
+  margin: 0;
 }
 
 .card span {
@@ -110,4 +133,21 @@ body {
   margin-top: 1rem;
   font-weight: 700;
   color: var(--accent);
+  transition: transform 180ms ease;
+}
+
+.card:hover span,
+.card:focus-visible span {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
