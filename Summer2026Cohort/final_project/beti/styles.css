@@ -152,6 +152,43 @@ background-repeat: no-repeat;
     margin: 0;
 }
 
+.project-link-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    text-align: center;
+    background: #fff3f8;
+    border: 1px solid #f0bdd6;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(81, 2, 64, 0.08);
+}
+
+.project-link-section h2 {
+    margin-top: 0;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.65rem 1rem;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    background: #980678;
+    border-radius: 6px;
+    transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+    background: #510240;
+    transform: translateY(-2px);
+}
+
+.project-link:focus-visible {
+    outline: 3px solid #d41b72;
+    outline-offset: 3px;
+}
+
 .site-footer {
     margin-top: 3rem;
     padding: 2rem 1rem 1.25rem;

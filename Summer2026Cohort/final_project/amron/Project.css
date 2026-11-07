@@ -17,11 +17,12 @@
 
 
 body {
-    background-color: #168b0c;
+    background-color: #0b5e03;
     color: #ffffff;
     font-family: Arial, sans-serif;
     padding: 40px;
     text-align: center;
+    
 }
 
 @media (max-width: 700px) {
@@ -91,6 +92,9 @@ a:active{
     width: 160px;
 }
 
+nav {
+    position: sticky;
+}
 .menu-bar{
     background-image: url('Flaggs.jpg');
     background-size: cover;
@@ -113,13 +117,13 @@ a:active{
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    background: rgba(0, 0, 0, 0.18);
+    background: rgba(188, 8, 8, 0.18);
     padding: 8px 12px;
     border-radius: 8px;
 }
 
 .menu-bar a:hover {
-    text-decoration: underline;
+    background-color: #358857;
 }
 
 .menu-container {
@@ -169,3 +173,20 @@ a:active{
 .card-1 { border-bottom: 5px solid #e74c3c; }
 .card-2 { border-bottom: 5px solid #f1c40f; }
 .card-3 { border-bottom: 5px solid #3498db; }
+
+
+.site-footer {
+    margin-top: .1rem;
+    padding: 0.25rem 2.25rem 0.25rem;
+    color: #18056c;
+    text-align: center;
+    background: #f5a608;
+    border-top: 5px solid #046b23;
+}
+
+.site-footer div {
+    padding-top: 1rem;
+    color: #160357;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
