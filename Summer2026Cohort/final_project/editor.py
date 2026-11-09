@@ -78,12 +78,12 @@ def remove_string_from_filenames(
 
 # ---------------- Example Usage ----------------
 if __name__ == "__main__":
-    folder = "./beti"
+    folder = "./ethan/New"
 
     # Step 1: Preview removing "[DRAFT]" from all files
     remove_string_from_filenames(
         folder_path=folder,
-        target_string=" - Bethel Mulate",
+        target_string=" - Copy",
         case_sensitive=False,
         dry_run=False,  # Set to False to apply
     )
